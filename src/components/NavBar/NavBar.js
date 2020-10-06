@@ -22,11 +22,6 @@ function Navbar() {
         src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
         alt="Netflix Logo"
       />
-      <img
-        className="user-logo"
-        alt="User Icon"
-        src="https://startupcan.ch/wp-content/uploads/2019/04/profile-pictures-avatars-9.png"
-      />
     </div>
   );
 }

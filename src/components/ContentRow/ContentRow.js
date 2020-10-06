@@ -58,16 +58,20 @@ function ContentRow({ title, fetchURL, isLargeRow }) {
             {movies.length &&
               movies.map(movie => {
                 return (
-                  <img
-                    key={movie.id}
-                    onClick={() => handleClick(movie)}
-                    className={`poster ${isLargeRow && "poster-large"}`}
-                    src={`${base_url}${
-                      isLargeRow ? movie.poster_path : movie.backdrop_path
-                    }
+                  (movie.backdrop_path || movie.poster_path) && (
+                    <img
+                      key={movie.id}
+                      onClick={() => handleClick(movie)}
+                      className={`poster ${isLargeRow && "poster-large"}`}
+                      src={`${base_url}${
+                        isLargeRow
+                          ? movie.poster_path
+                          : movie.backdrop_path || movie.poster_path
+                      }
               `}
-                    alt={movie.name}
-                  />
+                      alt={movie.name}
+                    />
+                  )
                 );
               })}
           </div>

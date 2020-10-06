@@ -1,12 +1,12 @@
 .row {
-    .title{
-        color: rgb(229, 229, 229);
-        font-size: 20px;
-        font-weight: bold;
-        height: 18px;
-    }
-    margin-left: 10px;
-    color: white;
+  margin-left: 10px;
+  color: white;
+  .title {
+    color: rgb(229, 229, 229);
+    font-size: 20px;
+    font-weight: bold;
+    height: 18px;
+  }
   &__posters {
     display: flex;
     overflow-y: hidden;
@@ -15,11 +15,10 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    
     .poster {
       object-fit: contain;
       width: 100%;
-      max-height: 100px;
+      max-height: 120px;
       transition: transform 450ms;
       margin-right: 10px;
       &:hover {
@@ -27,11 +26,11 @@
         opacity: 1;
       }
     }
-    .poster-large{
-        max-height: 250px;
-        &:hover {
-            transform: scale(1.09);
-          }
+    .poster-large {
+      max-height: 250px;
+      &:hover {
+        transform: scale(1.09);
+      }
     }
   }
 }
