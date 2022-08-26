@@ -1,7 +1,16 @@
-import axios from "axios";
+const mongoose = require("mongoose");
 
-const instance = axios.create({
-  baseURL: "https://api.themoviedb.org/3"
+const Schema = mongoose.Schema;
+
+const UserSchema = new Schema({
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    require: true,
+  },
 });
 
-export default instance;
+module.exports = mongoose.model("userSchema", UserSchema);
